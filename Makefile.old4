@@ -1,0 +1,7 @@
+CC = gcc
+CFLAGS = -W -Wall
+TARGET = diary_exe
+$(TARGET) : memo.o calendar.o main.o
+	$(CC) $(CFLAGS) -o $(TARGET) memo.o calendar.o main.o
+clean :
+	rm *.o $(TARGET)
